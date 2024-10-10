@@ -1,1 +1,5 @@
 <who-am-i [name]="whoAmI" />
+<hr>
+<app-i-choose-you (choose)="onChoose($event)" [names]="candidates" />
+<hr>
+on AppComponent - chooseAnimal: {{ chooseAnimal }}
