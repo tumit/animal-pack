@@ -1,11 +1,11 @@
-import { Component, NgModule } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
   selector: `who-am-i`,
   template: `
     <p>Who Am I ?</p>
     <div class="partial">
-      <img src="/packs/bear.png" alt="">
+      <img src="/packs/{{name}}.png" alt="">
     </div>
   `,
   styles: `
@@ -18,13 +18,7 @@ import { Component, NgModule } from "@angular/core";
 })
 export class WhoAmIComponent {
 
+  @Input()
+  name = 'cow'
+
 }
-
-
-// @NgModule({
-//   declarations: [WhoAmIComponent],
-//   exports: [WhoAmIComponent]
-// })
-// export class AnimalPackModule {
-
-// }

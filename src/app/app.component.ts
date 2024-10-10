@@ -11,4 +11,5 @@ import { WhoAmIComponent } from './who-am-i.component';
 })
 export class AppComponent {
   title = 'animal-pack';
+  whoAmI = 'bear'
 }
