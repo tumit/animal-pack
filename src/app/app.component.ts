@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { AnimalPackModule } from './who-am-i.component';
+import { WhoAmIComponent } from './who-am-i.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, AnimalPackModule],
+  imports: [RouterOutlet, WhoAmIComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
