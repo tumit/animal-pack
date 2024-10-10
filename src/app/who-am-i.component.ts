@@ -1,11 +1,12 @@
 import { Component, Input } from "@angular/core";
+import { AnimalPackService } from "./animal-pack.service";
 
 @Component({
   selector: `who-am-i`,
   template: `
     <p>Who Am I ?</p>
     <div class="partial">
-      <img src="/packs/{{name}}.png" alt="">
+      <img src="{{animalPackService.getPath(name)}}" alt="">
     </div>
   `,
   styles: `
@@ -20,5 +21,7 @@ export class WhoAmIComponent {
 
   @Input()
   name = 'cow'
+
+  constructor(public animalPackService: AnimalPackService) {}
 
 }

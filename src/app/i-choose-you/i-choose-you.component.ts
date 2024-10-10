@@ -1,5 +1,6 @@
 // i-choose-you.component.ts
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
+import { AnimalPackService } from '../animal-pack.service';
 
 @Component({
   selector: 'app-i-choose-you',
@@ -15,6 +16,13 @@ export class IChooseYouComponent {
 
   @Output()
   choose = new EventEmitter<string>();
+
+  animalPackService = inject(AnimalPackService)
+
+  // animalPackService: AnimalPackService
+  // constructor() {
+  //   this.animalPackService = inject(AnimalPackService)
+  // }
 
   selected = ''
 

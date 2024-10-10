@@ -2,4 +2,13 @@
 <hr>
 <app-i-choose-you (choose)="onChoose($event)" [names]="candidates" />
 <hr>
-on AppComponent - chooseAnimal: {{ chooseAnimal }}
+<!-- on AppComponent - chooseAnimal: {{ chooseAnimal }} -->
+<button (click)="onReset()" >New Game</button>
+Answer:
+@if (!chooseAnimal) {
+  ❓️
+} @else if (chooseAnimal === whoAmI) {
+  ✅
+} @else {
+  ❌
+}
