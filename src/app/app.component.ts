@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { WhoAmIComponent } from './who-am-i.component';
 import { IChooseYouComponent } from './i-choose-you/i-choose-you.component';
 import { AnimalPackService } from './animal-pack.service';
@@ -16,6 +16,7 @@ export class AppComponent {
   candidates = ['bear', 'frog', 'sloth']
 
   animalPackService = inject(AnimalPackService)
+  router = inject(Router)
   
   chooseAnimal = ''
 
@@ -31,6 +32,10 @@ export class AppComponent {
     this.chooseAnimal = ''
     this.candidates = this.animalPackService.randomN(5)
     this.whoAmI = this.animalPackService.randomOne(this.candidates)
+  }
+
+  gotoCredit() {
+    this.router.navigate(['/directed-by'])
   }
 
 }
