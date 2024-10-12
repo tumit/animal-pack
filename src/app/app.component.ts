@@ -20,6 +20,8 @@ export class AppComponent {
   
   chooseAnimal = ''
 
+  director = 'Tumit O. Odds'
+
   constructor() {
     this.onReset();
   }
@@ -35,7 +37,7 @@ export class AppComponent {
   }
 
   gotoCredit() {
-    this.router.navigate(['/directed-by'])
+    this.router.navigate(['/directed-by', 'Tumit OX. Odds'])
   }
 
 }

@@ -3,6 +3,5 @@ import { DirectedByComponent } from './directed-by/directed-by.component';
 import { WhoAmIComponent } from './who-am-i.component';
 
 export const routes: Routes = [
-  { path: 'directed-by', component: DirectedByComponent },
-  { path: 'who-am-i', component: WhoAmIComponent }
+  { path: 'directed-by/:director', component: DirectedByComponent }
 ];
