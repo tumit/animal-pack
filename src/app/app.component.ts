@@ -3,11 +3,12 @@ import { Router, RouterOutlet } from '@angular/router';
 import { WhoAmIComponent } from './who-am-i.component';
 import { IChooseYouComponent } from './i-choose-you/i-choose-you.component';
 import { AnimalPackService } from './animal-pack.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, WhoAmIComponent, IChooseYouComponent],
+  imports: [RouterOutlet, WhoAmIComponent, IChooseYouComponent, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -37,7 +38,7 @@ export class AppComponent {
   }
 
   gotoCredit() {
-    this.router.navigate(['/directed-by', 'Tumit OX. Odds'])
+    this.router.navigate(['/directed-by', this.director])
   }
 
 }

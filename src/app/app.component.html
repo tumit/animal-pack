@@ -3,6 +3,13 @@
 <app-i-choose-you (choose)="onChoose($event)" [names]="candidates" />
 <hr>
 <!-- on AppComponent - chooseAnimal: {{ chooseAnimal }} -->
+<!-- [] => box () => banana -->
+ <!-- [(ngModel)] => banana in the box -->
+debug: {{ director }}
+<hr>
+<label for="director">Director</label>
+<input type="text" id="director" [(ngModel)]="director"> 
+
 <button (click)="onReset()" >New Game</button>
 Answer:
 @if (!chooseAnimal) {
